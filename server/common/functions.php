@@ -18,6 +18,33 @@ function connect_db()
     }
 }
 
+
+
+
+//バイタル入力画面のデータが戻ってくるようにするやつ
+function vaitel_date($id)
+{
+    $dbh = connect_db();
+
+    $sql = <<<EOM
+    SELECT
+        *
+    FROM
+        10_vaitel;
+    WHERE
+        id = :id;
+    EOM;
+
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+
+
+
 // エスケープ処理を行う関数
 function h($str)
 {

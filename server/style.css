@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* body全体に書くもの */
+/*コンテンツ全体に対する指定*/
+body {
+    font-family: "M PLUS 1p", sans-serif;
+    color: #4d4d4d;
+    background: #000;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0 4%;
+}
+
+/* index.phpのcss */
+h1 {
+    text-align: center;
+}
+
+/* calendar.phpのcss */
+.table-boder tr td{
+    text-align: right;
+    /* margin-left: auto; */
+    background: #000;
+    height: 100px;
+}
